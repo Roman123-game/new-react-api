@@ -4,12 +4,14 @@
   color: black;
   font-size: x-large;
   background-image: url("../public/wallpaper.png");
+  background-color: rgba(0,0,0,0.3 );
   background-repeat: repeat;
 }
 
 .lorem {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
+  color:white;
   margin:auto;
   backdrop-filter: blur(6px);
   width:300px;
@@ -25,6 +27,7 @@
   padding: 5px;
   background-color: lightslategray;
   border-radius: 25px;
+  color:white;
 }
 
 .map {
@@ -47,7 +50,7 @@
   text-align: left;
   border: 1px solid lightslategray;
   background-color: #90ee90;
-  color: black;
+  color:white;
   font-family: sans-serif;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -65,7 +68,7 @@
 .buttonX {
   align-self: flex-start;
   background-color: lightslategray;
-  color: black;
+  color:white;
   font-size: 13px;
   width: fit-content;
   margin-top: 0px;
@@ -73,6 +76,7 @@
   margin-left: auto;
   border: none;
   border-radius: 50%;
+  color:white;
 }
 
 .bold {
@@ -95,6 +99,7 @@
   width: 120px;
   border-radius: 25px;
   font-size: medium;
+  color:white;
 }
 
 .backward:hover,
@@ -116,6 +121,7 @@ select:hover,
   text-wrap:balance;
   margin: 20px;
  backdrop-filter: blur(6px);
+ color:white;
 
   
 }
