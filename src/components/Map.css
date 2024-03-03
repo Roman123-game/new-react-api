@@ -1,5 +1,4 @@
 .dot{
-    position: relative ;
     color:red;
     font-size: larger;
     font-weight: 800;
@@ -7,10 +6,9 @@
     
 }
 .map {
-    position: absolute;
     text-align: center;
     align-items: center;
-    margin: -90px 400px;
+    margin: -70px 600px;
     font-size: 7.1em;
     width: 300px;
     filter: drop-shadow(10px 5px 2px darkgrey);
