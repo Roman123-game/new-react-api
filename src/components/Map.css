@@ -1,4 +1,5 @@
 .dot{
+    position: absolute;
     color:red;
     font-size: larger;
     font-weight: 800;
@@ -6,25 +7,26 @@
     
 }
 .map {
+    position: relative;
     text-align: center;
     align-items: center;
     margin: -70px 600px;
     font-size: 7.1em;
     width: 300px;
-    filter: drop-shadow(10px 5px 2px darkgrey);
+    /* filter: drop-shadow(10px 5px 2px darkgrey); */
     text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen,0 -1px lightgreen;
     color: lightskyblue;
     z-index: 0;
   }
 .en{
   
-    top: 0px;
-    left:0px
+    top: 70px;
+    left: 770px;
     
 }
 .he{
   
-    top: 0px;
-    left:0px
+    top: 95px;
+    left: 815px;
     
 }
