@@ -2,6 +2,7 @@ import axios from "axios";
 import "./App.css";
 import * as React  from "react";
 import {memo, useState, useEffect, useCallback } from "react";
+import Map from "./components/Map";
 
 type EffectCallback = () => (void | any);
 
@@ -107,7 +108,7 @@ const App  : React.FC = () => {
   return (
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
-      <h1 className="map">&#x1F5FA;</h1>
+      <Map position={language}></Map>
        <select 
        className="select" 
        onChange={(event: React.FormEvent<HTMLSelectElement>)=>setNewLanguage(event)}>

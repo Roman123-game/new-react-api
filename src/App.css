@@ -30,16 +30,7 @@
   color:white;
 }
 
-.map {
-  text-align: center;
-  align-items: center;
-  margin: -50px auto;
-  font-size: 7.1em;
-  width: 300px;
-  filter: drop-shadow(10px 5px 2px darkgrey);
-  text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen,0 -1px lightgreen;
-  color: lightskyblue;
-}
+
 
 .id {
   display: flex;
