@@ -114,6 +114,7 @@ const App  : React.FC = () => {
        onChange={(event: React.FormEvent<HTMLSelectElement>)=>setNewLanguage(event)}>
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
+        <option value="ja">JAPANESE</option>
        </select>
       {[...posts].map((post: Post) => (
         <div className="id" key={post.id}>
