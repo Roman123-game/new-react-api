@@ -115,6 +115,7 @@ const App  : React.FC = () => {
         <option value="en">ENGLISH</option>
         <option value="he">HEBREW</option>
         <option value="ja">JAPANESE</option>
+        <option value="de">GERMAN</option>
        </select>
       {[...posts].map((post: Post) => (
         <div className="id" key={post.id}>
