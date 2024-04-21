@@ -158,7 +158,6 @@ export default memo(App);
 
 
 
-// Language Name	Language Code
 // Afrikaans	af
 // Albanian	sq
 // Amharic	am
