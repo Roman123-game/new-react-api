@@ -157,7 +157,6 @@ const App  : React.FC = () => {
 export default memo(App);
 
 
-//dghh
 // Afrikaans	af
 // Albanian	sq
 // Amharic	am
