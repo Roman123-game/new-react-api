@@ -268,4 +268,3 @@ export default memo(App);
 // Zulu	zu
 // Hebrew	he
 // Chinese (Simplified)	zh
-//coments
