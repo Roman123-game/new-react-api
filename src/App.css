@@ -97,8 +97,8 @@ select:hover,
 .translate {
   align-items: center;
   justify-content: center;
-  border: 1px dashed lightgreen;
-  border-width: 2px 4px;
+  border: 1px dashed lightcoral;
+  border-width: 3px 6px;
   border-radius: 40px;
   width: 400px;
   height: fit-content;
