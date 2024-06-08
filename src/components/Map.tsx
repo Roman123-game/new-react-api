@@ -6,8 +6,8 @@ function Map(props:any) {
     return (  
 
         <>
+         <h1 className="map">&#x1F5FA;</h1>
         <div className={`dot ${position}`}>.</div>
-        <h1 className="map">&#x1F5FA;</h1>
         </>
 
 

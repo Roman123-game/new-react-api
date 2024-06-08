@@ -1,36 +1,40 @@
-.dot{
-    position: absolute;
-    color:red;
+.dot {
+    position: relative;
+    color: red;
     font-size: larger;
     font-weight: 800;
     z-index: 10;
-    
+
 }
+
 .map {
-    position: relative;
+    position: static;
     text-align: center;
     align-items: center;
-    margin: -65px 600px;
+    margin: -65px auto;
     font-size: 7.1em;
     width: 300px;
     /* filter: drop-shadow(10px 5px 2px darkgrey); */
-    text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen,0 -1px lightgreen;
+    text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
     color: lightskyblue;
     z-index: 0;
-  }
-.en{
-    top: 70px;
-    left: 770px;
 }
-.he{
-    top: 100px;
-    left: 810px;
+
+.en {
+    bottom: 85px;
 }
-.ja{
-    top: 115px;
-    left: 860px;
+
+.he {
+    bottom: 60px;
+    left: 45px
 }
-.de{
-    top: 80px;
-    left: 780px;
+
+.ja {
+    bottom: 45px;
+    left: 95px
+}
+
+.de {
+    bottom: 80px;
+    left: 15px;
 }
