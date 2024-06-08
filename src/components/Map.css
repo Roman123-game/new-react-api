@@ -11,30 +11,32 @@
     position: static;
     text-align: center;
     align-items: center;
-    margin: -60px auto;
+    margin: 10px auto;
     font-size: 7.1em;
     width: 300px;
     /* filter: drop-shadow(10px 5px 2px darkgrey); */
     text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
     color: lightskyblue;
     z-index: 0;
+    backdrop-filter: blur(8px);
+    border: 3px solid lightgreen;
 }
 
 .en {
-    bottom: 85px;
+    bottom: 165px;
 }
 
 .he {
-    bottom: 60px;
+    bottom: 140px;
     left: 45px
 }
 
 .ja {
-    bottom: 45px;
+    bottom: 120px;
     left: 95px
 }
 
 .de {
-    bottom: 80px;
+    bottom: 160px;
     left: 15px;
 }
