@@ -16,10 +16,7 @@
   backdrop-filter: blur(8px);
   width:300px;
   border-radius: 15px;
-  border : 5px inset black
-
-
-
+  border : 5px inset transparent;
 }
 
 .select {
