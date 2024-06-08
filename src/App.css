@@ -80,7 +80,7 @@
 .backward,
 .select {
   background-color:slategrey;
-  border: 3px double lightgreen;
+  border: 5px double lightgreen;
   width: 120px;
   border-radius: 25px;
   font-size: medium;
