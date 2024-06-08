@@ -1,9 +1,9 @@
 .dot {
     position: relative;
     color: red;
-    font-size: larger;
-    font-weight: 800;
     z-index: 10;
+    text-shadow: 1px 1px solid black;
+    font-size: x-small;
 
 }
 
@@ -24,20 +24,21 @@
 }
 
 .en {
-    bottom: 165px;
+    bottom: 145px;
+    left: 5px
 }
 
 .he {
-    bottom: 140px;
+    bottom: 120px;
     left: 45px
 }
 
 .ja {
-    bottom: 120px;
+    bottom: 100px;
     left: 95px
 }
 
 .de {
-    bottom: 160px;
+    bottom: 140px;
     left: 15px;
 }

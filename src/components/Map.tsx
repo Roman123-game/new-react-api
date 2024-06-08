@@ -7,7 +7,7 @@ function Map(props:any) {
 
         <>
          <h1 className="map">&#x1F5FA;</h1>
-        <div className={`dot ${position}`}>.</div>
+        <div className={`dot ${position}`}>&#x1F789;</div>
         </>
 
 
