@@ -3,7 +3,7 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image:linear-gradient(to right,rgba(0,0,0,0.431 ),rgba(0,255,183,0.427 )), url("../public/wallpaper.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427)), url("../public/wallpaper.png");
   /* background-color: rgba(0,0,0,0.3 ); */
   background-repeat: repeat;
 }
@@ -11,19 +11,19 @@
 .lorem {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-variant-ligatures: common-ligatures;
-  color:white;
-  margin:auto;
+  color: white;
+  margin: auto;
   backdrop-filter: blur(8px);
-  width:300px;
+  width: 300px;
   border-radius: 15px;
-  border : 5px inset transparent;
+  border: 5px inset transparent;
 }
 
 .select {
   padding: 5px;
   background-color: lightseagreen;
   border-radius: 25px;
-  color:white;
+  color: white;
 }
 
 
@@ -35,10 +35,10 @@
   font-size: 16px;
   text-align: left;
   backdrop-filter: blur(8px);
-  color:white;
+  color: white;
   font-family: sans-serif;
   border-radius: 25px;
-  padding:5px ;
+  padding: 5px;
   margin: 4px;
   border: 3px solid lightcoral
 }
@@ -54,7 +54,7 @@
 .buttonX {
   align-self: flex-start;
   background-color: lightseagreen;
-  color:white;
+  color: white;
   font-size: 13px;
   width: fit-content;
   margin-top: 0px;
@@ -65,14 +65,14 @@
 }
 
 .bold {
-  height:16px;
+  height: 16px;
   font-size: small;
   border: 1px solid grey;
   background-color: lightgreen;
   color: grey;
   border-radius: 50%;
   padding: 2px 8px;
-  text-align:left;
+  text-align: left;
   letter-spacing: -1px;
 }
 
@@ -84,7 +84,7 @@
   width: 120px;
   border-radius: 25px;
   font-size: medium;
-  color:white;
+  color: white;
 }
 
 .backward:hover,
@@ -95,20 +95,24 @@ select:hover,
 }
 
 .translate {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-variant-ligatures: common-ligatures;
+  color: white;
   align-items: center;
   justify-content: center;
-  border: 1px dashed lightcoral;
+  border: dashed lightcoral;
   border-width: 3px 6px;
   border-radius: 40px;
   width: 400px;
   height: fit-content;
-  padding:2px 20px;
-  text-wrap:balance;
+  padding: 2px 20px;
+  text-wrap: balance;
   margin: 20px;
- backdrop-filter: blur(8px);
- color:white;
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: larger;
 
-  
+
 }
 
 .translate::first-letter {
@@ -130,16 +134,15 @@ select:hover,
   animation: spin 2s linear infinite;
   margin: 20px;
   font-size: medium;
-  
+
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-
-
