@@ -79,7 +79,7 @@
 .forward,
 .backward,
 .select {
-  background-color: lightslategray;
+  background-color:slategrey;
   border: 3px double lightgreen;
   width: 120px;
   border-radius: 25px;
@@ -91,7 +91,7 @@
 .forward:hover,
 select:hover,
 .buttonX:hover {
-  color: gold;
+  color:gold
 }
 
 .translate {
