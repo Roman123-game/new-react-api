@@ -14,9 +14,10 @@
   color: white;
   margin: auto;
   backdrop-filter: blur(8px);
-  width: 300px;
+  width: 350px;
   border-radius: 15px;
   border: 5px inset transparent;
+  letter-spacing: 2px;
 }
 
 .select {
