@@ -46,29 +46,6 @@ const App  : React.FC = () => {
   }
 
   async function translate() {
-  //   const encodedParams = new URLSearchParams();
-  //   encodedParams.append("source_language", "la");
-  //   encodedParams.append("target_language", language);
-  //   encodedParams.append("text", currentPost);
-    
-  //   const options : Object = {
-  //     method: 'POST',
-  //     url: 'https://text-translator2.p.rapidapi.com/translate',
-  //     headers: {
-  //       'content-type': 'application/x-www-form-urlencoded',
-  //       'X-RapidAPI-Key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-  //       'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
-  //     },
-  //     data: encodedParams
-  //   };
-    
-  //  await axios.request(options).then(function (response:any) {
-  //   setTranslatedPost(response.data.data.translatedText);
-  //   setToggleTranslatedPost(true);
-  //   }).catch((error:any)=> {
-  //     console.error(error);
-  //   });
-  // }
 
   const options = {
     method: 'POST',
