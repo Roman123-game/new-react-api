@@ -3,10 +3,15 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427)), url("../public/wallpaper.png");
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.431),
+      rgba(0, 255, 183, 0.427)
+    ),
+    url("../public/wallpaper.png");
   /* background-color: rgba(0,0,0,0.3 ); */
   background-repeat: repeat;
-  overflow-x:hidden
+  overflow-x: hidden;
 }
 
 .lorem {
@@ -28,8 +33,6 @@
   color: white;
 }
 
-
-
 .id {
   display: flex;
   align-items: center;
@@ -42,7 +45,7 @@
   border-radius: 25px;
   padding: 5px;
   margin: 4px;
-  border: 3px solid lightcoral
+  border: 3px solid lightcoral;
 }
 
 .title {
@@ -81,7 +84,7 @@
 .forward,
 .backward,
 .select {
-  background-color:slategrey;
+  background-color: slategrey;
   border: 5px double lightgreen;
   width: 120px;
   border-radius: 25px;
@@ -93,7 +96,7 @@
 .forward:hover,
 select:hover,
 .buttonX:hover {
-  color:gold
+  color: gold;
 }
 
 .translate {
@@ -113,8 +116,6 @@ select:hover,
   backdrop-filter: blur(8px);
   color: white;
   font-size: larger;
-
-
 }
 
 .translate::first-letter {
@@ -136,7 +137,6 @@ select:hover,
   animation: spin 2s linear infinite;
   margin: 20px;
   font-size: medium;
-
 }
 
 @keyframes spin {
