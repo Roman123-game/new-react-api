@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
   async function fetchPost(_limit = 10, _page = page) {
     const responce = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos",
+      "https://jsonplaceholder.typicode.com/posts",
       {
         params: {
           _limit: limit,
