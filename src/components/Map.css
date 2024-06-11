@@ -11,9 +11,10 @@
     position: static;
     text-align: center;
     align-items: center;
-    margin: 10px auto;
+    margin: 5px auto;
     font-size: 7.1em;
     width: 300px;
+    height: auto;
     /* filter: drop-shadow(10px 5px 2px darkgrey); */
     text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
     color: lightskyblue;
@@ -24,7 +25,7 @@
 }
 
 .en {
-    bottom: 145px;
+    bottom: 140px;
     right: 0px
 }
 
