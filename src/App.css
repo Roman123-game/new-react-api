@@ -3,11 +3,9 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(0, 0, 0, 0.431),
-      rgba(0, 255, 183, 0.427)
-    ),
+      rgba(0, 255, 183, 0.427)),
     url("../public/wallpaper.png");
   /* background-color: rgba(0,0,0,0.3 ); */
   background-repeat: repeat;
@@ -92,11 +90,17 @@
   color: white;
 }
 
+
 .backward:hover,
 .forward:hover,
 select:hover,
 .buttonX:hover {
   color: gold;
+}
+
+.forward:disabled,
+.backward:disabled {
+  color: dimgrey
 }
 
 .translate {

@@ -80,7 +80,7 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    if (page >= 20) {
+    if (page >= 10) {
       setForwardDisabled(true);
     } else {
       setForwardDisabled(false);
