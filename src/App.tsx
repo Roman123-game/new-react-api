@@ -33,7 +33,7 @@ const App: React.FC = () => {
     translate();
   }, [currentPost]);
 
-  async function fetchPost(_limit = 100,) {
+  async function fetchPost() {
     const responce = await axios.get(
       "https://jsonplaceholder.typicode.com/posts",
       {
