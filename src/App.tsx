@@ -18,27 +18,33 @@ const App: React.FC = () => {
   const [language, setLanguage] = useState<string>("en")
   const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState<string>("");
-  const [page, setPage] = useState<number>(1);
-  const limit: number = 10;
+  const [page, setPage] = useState<number>(10);
+  const limit: number = 100;
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
+  let slicedPosts = posts.slice(page - 10, page);
+  console.log(slicedPosts, posts)
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
+  }, []);
+
+  useEffect((): ReturnType<EffectCallback> => {
+    slicedPosts = posts.slice(page - 10, page);
   }, [page]);
 
   useEffect((): ReturnType<EffectCallback> => {
     translate();
   }, [currentPost]);
 
-  async function fetchPost(_limit = 10, _page = page) {
+  async function fetchPost() {
     const responce = await axios.get(
       "https://jsonplaceholder.typicode.com/posts",
       {
         params: {
           _limit: limit,
-          _page: page,
+
         },
       }
     );
@@ -80,22 +86,22 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    if (page >= 10) {
+    if (page >= 100) {
       setForwardDisabled(true);
     } else {
       setForwardDisabled(false);
       setBackwardDisabled(false);
-      setPage(page + 1);
+      setPage(page + 10);
     }
   }, [page])
 
   const setBackwardPage = useCallback(() => {
-    if (page <= 1) {
+    if (page <= 10) {
       setBackwardDisabled(true);
     } else {
       setForwardDisabled(false);
       setBackwardDisabled(false);
-      setPage(page - 1);
+      setPage(page - 10);
     }
   }, [page])
 
@@ -118,7 +124,7 @@ const App: React.FC = () => {
         <option value="ja">JAPANESE</option>
         <option value="de">GERMAN</option>
       </select>
-      {[...posts].map((post: Post) => (
+      {slicedPosts.map((post: Post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
           <div
