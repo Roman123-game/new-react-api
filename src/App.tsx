@@ -16,9 +16,7 @@ interface Post {
 const App: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const [language, setLanguage] = useState<string>("en");
-  const [currentPost, setCurrentPost] = useState<string>(
-    "click on post for translation"
-  );
+  const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(10);
   const limit: number = 100;
