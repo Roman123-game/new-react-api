@@ -24,7 +24,6 @@ const App: React.FC = () => {
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
   let slicedPosts = posts.slice(page - 10, page);
-  console.log(slicedPosts, posts)
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
