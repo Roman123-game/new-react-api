@@ -22,8 +22,7 @@ const App: React.FC = () => {
   const limit: number = 100;
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
-  const [toggleTranslatedPost, setToggleTranslatedPost] =
-    useState<boolean>(false);
+  const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
   let slicedPosts = posts.slice(page - 10, page);
 
   useEffect(
