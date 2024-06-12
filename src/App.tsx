@@ -34,20 +34,11 @@ const App: React.FC = () => {
   }, [currentPost]);
 
   async function fetchPost() {
-    const responce = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts",
-      {
-        params: {
-          _limit: limit,
-
-        },
-      }
-    );
+    const responce = await axios.get("https://jsonplaceholder.typicode.com/posts",{params: {_limit: limit}});
     setPosts(responce.data);
   }
 
   async function translate() {
-
     const options = {
       method: 'POST',
       url: 'https://translate-plus.p.rapidapi.com/translate',
@@ -74,9 +65,7 @@ const App: React.FC = () => {
   }
 
   const removePost = useCallback((event: any) => {
-    const afterFilter = posts.filter(
-      (value: any) => value.id !== parseInt(event.target.value)
-    );
+    const afterFilter = posts.filter((value: any) => value.id !== parseInt(event.target.value));
     setPosts(afterFilter);
   }, [posts])
 
