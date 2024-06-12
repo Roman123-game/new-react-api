@@ -69,7 +69,7 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    if (page >= 100) {
+    if (page >= posts.length) {
       setForwardDisabled(true);
     } else {
       setForwardDisabled(false);
