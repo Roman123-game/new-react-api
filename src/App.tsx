@@ -56,7 +56,6 @@ const App: React.FC = () => {
 
     try {
       const response = await axios.request(options)
-      console.log(response.data.translations.translation)
       setTranslatedPost(response.data.translations.translation);
       setToggleTranslatedPost(true);
     } catch (error) {
