@@ -23,11 +23,15 @@ const App: React.FC = () => {
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
-  const slicePost = posts.slice(page - 10, page)
+  let slicePost = posts.slice(page - 10, page)
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
   }, []);
+
+  useEffect((): ReturnType<EffectCallback> => {
+    slicePost = posts.slice(page - 10, page)
+  }, [page]);
 
   useEffect((): ReturnType<EffectCallback> => {
     translate();
@@ -69,7 +73,7 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    if (page >= posts.length) {
+    if (page >= 100) {
       setForwardDisabled(true);
     } else {
       setForwardDisabled(false);
