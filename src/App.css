@@ -3,13 +3,10 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0.431),
-      rgba(0, 255, 183, 0.427)),
-    url("../public/wallpaper.png");
-  /* background-color: rgba(0,0,0,0.3 ); */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427)),url("../public/wallpaper.png");
   background-repeat: repeat;
   overflow-x: hidden;
+  min-height: 600px;
 }
 
 .lorem {
