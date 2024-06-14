@@ -43,9 +43,6 @@ const App: React.FC = () => {
     setPosts(responce.data);
   }
 
-
-
-
   async function translate() {
     const options = {
       method: 'POST',
