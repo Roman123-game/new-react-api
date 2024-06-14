@@ -97,10 +97,6 @@ const App: React.FC = () => {
     }
   }, [page])
 
-  const setNewPost = (event: any) => {
-    setCurrentPost(event.target.innerHTML)
-  }
-
   return (
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
@@ -118,7 +114,7 @@ const App: React.FC = () => {
           <div className="bold"> {post.id}</div>
           <div
             className="title"
-            onClick={(event: React.MouseEvent<HTMLElement>) => setNewPost(event)}>
+            onClick={(event: React.MouseEvent<HTMLElement>) =>  setCurrentPost(event.currentTarget.innerHTML)}>
             {post.title}
           </div>
           <button
