@@ -95,6 +95,10 @@ select:hover,
   color: gold;
 }
 
+select:focus {
+  outline:none;
+}
+
 .forward:disabled,
 .backward:disabled {
   color: dimgrey
