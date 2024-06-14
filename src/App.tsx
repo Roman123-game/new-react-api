@@ -73,14 +73,15 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    if (page >= 100) {
+    console.log(posts.length)
+    if (page >= posts.length) {
       setForwardDisabled(true);
     } else {
       setForwardDisabled(false);
       setBackwardDisabled(false);
       setPage(page + 10);
     }
-  }, [page])
+  }, [page,posts])
 
   const setBackwardPage = useCallback(() => {
     if (page <= 10) {
