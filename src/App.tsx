@@ -14,6 +14,7 @@ interface Post {
 }
 
 const App: React.FC = () => {
+
   const [posts, setPosts] = useState<any[]>([]);
   const [language, setLanguage] = useState<string>("en")
   const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
@@ -41,6 +42,9 @@ const App: React.FC = () => {
     const responce = await axios.get("https://jsonplaceholder.typicode.com/posts",{params: {_limit: limit}});
     setPosts(responce.data);
   }
+
+
+
 
   async function translate() {
     const options = {
@@ -97,6 +101,7 @@ const App: React.FC = () => {
     setCurrentPost(event.target.innerHTML)
   }
   const setNewLanguage = (event: any) => {
+    console.log(event.target.value)
     setLanguage(event.target.value)
   }
 
@@ -108,7 +113,7 @@ const App: React.FC = () => {
         className="select"
         onChange={(event: React.FormEvent<HTMLSelectElement>) => setNewLanguage(event)}>
         <option value="en">ENGLISH</option>
-        <option value="he">HEBREW</option>
+        <option value="iw">HEBREW</option>
         <option value="ja">JAPANESE</option>
         <option value="de">GERMAN</option>
       </select>
