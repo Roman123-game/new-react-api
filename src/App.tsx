@@ -100,10 +100,6 @@ const App: React.FC = () => {
   const setNewPost = (event: any) => {
     setCurrentPost(event.target.innerHTML)
   }
-  const setNewLanguage = (event: any) => {
-    console.log(event.target.value)
-    setLanguage(event.target.value)
-  }
 
   return (
     <div className="App">
@@ -111,7 +107,7 @@ const App: React.FC = () => {
       <Map position={language}></Map>
       <select
         className="select"
-        onChange={(event: React.FormEvent<HTMLSelectElement>) => setNewLanguage(event)}>
+        onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
         <option value="en">ENGLISH</option>
         <option value="iw">HEBREW</option>
         <option value="ja">JAPANESE</option>
