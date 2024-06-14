@@ -15,7 +15,6 @@
     font-size: 7.1em;
     width: 300px;
     height: auto;
-    /* filter: drop-shadow(10px 5px 2px darkgrey); */
     text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
     color: lightskyblue;
     z-index: 0;
@@ -29,7 +28,7 @@
     right: 0px
 }
 
-.he {
+.iw {
     bottom: 120px;
     left: 45px
 }
