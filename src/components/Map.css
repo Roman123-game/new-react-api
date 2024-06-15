@@ -24,7 +24,6 @@
 
 }
 .map::before{
-    border-radius: 50%;
     content: '';
     position: absolute;
 }
