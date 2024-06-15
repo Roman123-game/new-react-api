@@ -74,7 +74,6 @@ const App: React.FC = () => {
   }, [posts])
 
   const setForwardPage = useCallback(() => {
-    console.log(posts.length)
     if (page >= posts.length) {
       setForwardDisabled(true);
     } else {
