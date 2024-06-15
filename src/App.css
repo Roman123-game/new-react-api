@@ -3,7 +3,7 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427)),url("../public/wallpaper.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.431), rgba(0, 255, 183, 0.427)), url("../public/wallpaper.png");
   background-repeat: repeat;
   overflow-x: hidden;
   min-height: 600px;
@@ -21,13 +21,15 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
-.description{
-color: white;
-backdrop-filter: blur(8px) saturate(150%);
-width: 600px;
-margin: 5px auto;
-border-radius: 15px;
+
+.description {
+  color: white;
+  backdrop-filter: blur(8px) saturate(150%);
+  width: 600px;
+  margin: 5px auto;
+  border-radius: 15px;
 }
+
 .select {
   padding: 5px;
   background-color: lightseagreen;
@@ -106,7 +108,7 @@ select:hover,
 }
 
 select:focus {
-  outline:none;
+  outline: none;
 }
 
 .forward:disabled,

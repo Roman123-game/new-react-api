@@ -21,7 +21,7 @@ const App: React.FC = () => {
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(10);
   const limit: number = 100;
-  const [showDescription, setshowDescription] = useState<boolean>(false);
+  const [showDescription, setShowDescription] = useState<boolean>(false);
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
@@ -96,7 +96,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h3 className="lorem" onClick={(event: React.MouseEvent<HTMLElement>) =>  setshowDescription(!showDescription)}> Lorem Ipsum Posts</h3>
+      <h3 className="lorem" onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}> Lorem Ipsum Posts</h3>
       {showDescription && <h5 className="description">app is extracting posts from api and using api for translate</h5>}
       <Map position={language}></Map>
       <select
