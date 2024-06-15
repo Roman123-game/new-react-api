@@ -21,6 +21,7 @@
     backdrop-filter: blur(8px) saturate(150%);
     border: 3px solid lightgreen;
     border-radius: 50%;
+    cursor:context-menu;
 
 }
 .map::before{
