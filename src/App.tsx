@@ -47,27 +47,51 @@ const App: React.FC = () => {
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://translate-plus.p.rapidapi.com/translate',
+      url: 'https://rapid-translate-multi-traduction.p.rapidapi.com/t',
       headers: {
         'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-        'x-rapidapi-host': 'translate-plus.p.rapidapi.com',
+        'x-rapidapi-host': 'rapid-translate-multi-traduction.p.rapidapi.com',
         'Content-Type': 'application/json'
       },
       data: {
-        text: currentPost,
-        source: 'la',
-        target: language
+        from: 'la',
+        to: language,
+        q: currentPost
       }
     };
 
     try {
-      const response = await axios.request(options)
-      setTranslatedPost(response.data.translations.translation);
-      setToggleTranslatedPost(true);
+      const response = await axios.request(options);
+      console.log(response.data[0]);
+      setTranslatedPost(response.data[0]);
+          setToggleTranslatedPost(true);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
+  //   const options = {
+  //     method: 'POST',
+  //     url: 'https://translate-plus.p.rapidapi.com/translate',
+  //     headers: {
+  //       'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+  //       'x-rapidapi-host': 'translate-plus.p.rapidapi.com',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     data: {
+  //       text: currentPost,
+  //       source: 'la',
+  //       target: language
+  //     }
+  //   };
+
+  //   try {
+  //     const response = await axios.request(options)
+  //     setTranslatedPost(response.data.translations.translation);
+  //     setToggleTranslatedPost(true);
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   const removePost = useCallback((event: any) => {
     const afterFilter = posts.filter((value: any) => value.id !== parseInt(event.target.value));
