@@ -19,6 +19,7 @@
   border-radius: 15px;
   border: 5px inset transparent;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .description{
 color: white;
