@@ -18,7 +18,7 @@
     text-shadow: -1px 0 lightgreen, 0 1px indigo, 1px 0 lightgreen, 0 -1px lightgreen;
     color: lightskyblue;
     z-index: 0;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px) saturate(150%);
     border: 3px solid lightgreen;
     border-radius: 50%;
 
