@@ -2,9 +2,9 @@ import "./Map.css";
 
 function Map(props:any) {
     const {position} = props
-    return (  
+    return (
         <>
-         <h1 className="map">&#x1F5FA;</h1>
+         <h1 className="map">&#128506;</h1>
         <div className={`dot ${position}`}>&#x1F789;</div>
         </>
     );

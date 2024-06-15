@@ -20,7 +20,13 @@
   border: 5px inset transparent;
   letter-spacing: 2px;
 }
-
+.description{
+color: white;
+backdrop-filter: blur(8px) saturate(150%);
+width: 600px;
+margin: 5px auto;
+border-radius: 15px;
+}
 .select {
   padding: 5px;
   background-color: lightseagreen;

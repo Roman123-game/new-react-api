@@ -96,6 +96,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h3 className="lorem"> Lorem Ipsum Posts</h3>
+      <h5 className="description">app is extracting posts from api and using api for translate</h5>
       <Map position={language}></Map>
       <select
         className="select"
