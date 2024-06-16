@@ -23,17 +23,13 @@
     border-radius: 150px;
     cursor:context-menu;
 }
-.map::before{
-    content: '';
-    position: absolute;
-}
 
 .en {
     bottom: 140px;
     right: 0px
 }
 
-.he {
+.iw {
     bottom: 120px;
     left: 45px
 }
