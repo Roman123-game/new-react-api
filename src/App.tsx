@@ -101,7 +101,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h3
-      data-title="click on Title for description"
+      data-title="click on title for description"
       className="lorem"
       onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}>
       Lorem Ipsum Posts
