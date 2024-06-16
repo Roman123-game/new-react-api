@@ -22,6 +22,33 @@
   cursor: pointer;
 }
 
+[data-title]{
+  position: relative;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color:aquamarine;
+  color: #111;
+  font-size: 12px;
+  position: absolute;
+  padding: 1px 5px 2px 5px;
+  bottom: -1.6em;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  border: 1px solid #111111;
+  border-radius: 25px;
+  z-index: 9;
+  visibility: hidden;
+
+}
+
 .description {
   color: white;
   backdrop-filter: blur(8px) saturate(150%);
@@ -54,13 +81,17 @@
   cursor: pointer;
 }
 
-.title {
+.post {
   margin-left: 5px;
 }
 
-.title::first-letter {
+
+
+.post::first-letter {
   text-transform: uppercase;
 }
+
+
 
 .buttonX {
   align-self: flex-start;

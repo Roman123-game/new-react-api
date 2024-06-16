@@ -101,7 +101,11 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h3
-      className="lorem" onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}> Lorem Ipsum Posts</h3>
+      data-title="click on Title for description"
+      className="lorem"
+      onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}>
+      Lorem Ipsum Posts
+      </h3>
       {showDescription && <h5 className="description">app is extracting posts from api and using api for translate</h5>}
       <Map position={language}/>
       <select
@@ -116,11 +120,12 @@ const App: React.FC = () => {
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
           <div
-            className="title"
+            className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) =>  setCurrentPost(event.currentTarget.innerHTML)}>
             {post.title}
           </div>
           <button
+            data-title="delete post"
             className="buttonX"
             value={post.id}
             onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>
@@ -130,15 +135,17 @@ const App: React.FC = () => {
       ))}
       <div className="container">
         <button
+         data-title="previous page"
           disabled={backwardDisabled}
           className="backward"
           onClick={setBackwardPage}>
           &#x227C;
         </button>
         {toggleTranslatedPost
-          ? <div className="translate">{translatedPost}</div>
+          ? <div  title="translated post" className="translate">{translatedPost}</div>
           : <div className="loader">&#x1F5FA;</div>}
         <button
+          data-title="next page"
           disabled={forwardDisabled}
           className="forward"
           onClick={setForwardPage}>
