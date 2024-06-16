@@ -20,7 +20,7 @@
     z-index: 0;
     backdrop-filter: blur(8px) saturate(150%);
     border: 3px solid lightgreen;
-    border-radius: 50%;
+    border-radius: 150px;
     cursor:context-menu;
 }
 .map::before{
@@ -33,7 +33,7 @@
     right: 0px
 }
 
-.iw {
+.he {
     bottom: 120px;
     left: 45px
 }

@@ -69,29 +69,7 @@ const App: React.FC = () => {
       console.error(error);
     }
   }
-  //   const options = {
-  //     method: 'POST',
-  //     url: 'https://translate-plus.p.rapidapi.com/translate',
-  //     headers: {
-  //       'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-  //       'x-rapidapi-host': 'translate-plus.p.rapidapi.com',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     data: {
-  //       text: currentPost,
-  //       source: 'la',
-  //       target: language
-  //     }
-  //   };
 
-  //   try {
-  //     const response = await axios.request(options)
-  //     setTranslatedPost(response.data.translations.translation);
-  //     setToggleTranslatedPost(true);
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
 
   const removePost = useCallback((event: any) => {
     const afterFilter = posts.filter((value: any) => value.id !== parseInt(event.target.value));
@@ -120,14 +98,15 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h3 className="lorem" onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}> Lorem Ipsum Posts</h3>
+      <h3
+      className="lorem" onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}> Lorem Ipsum Posts</h3>
       {showDescription && <h5 className="description">app is extracting posts from api and using api for translate</h5>}
-      <Map position={language}></Map>
+      <Map position={language}/>
       <select
         className="select"
         onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
         <option value="en">ENGLISH</option>
-        <option value="iw">HEBREW</option>
+        <option value="he">HEBREW</option>
         <option value="ja">JAPANESE</option>
         <option value="de">GERMAN</option>
       </select>
@@ -169,114 +148,3 @@ const App: React.FC = () => {
 }
 
 export default memo(App);
-// Afrikaans	af
-// Albanian	sq
-// Amharic	am
-// Arabic	ar
-// Armenian	hy
-// Azerbaijani	az
-// Basque	eu
-// Belarusian	be
-// Bengali	bn
-// Bosnian	bs
-// Bulgarian	bg
-// Catalan	ca
-// Cebuano	ceb
-// Chichewa	ny
-// Chinese (Simplified)	zh-CN
-// Chinese (Traditional)	zh-TW
-// Corsican	co
-// Croatian	hr
-// Czech	cs
-// Danish	da
-// Dutch	nl
-// English	en
-// Esperanto	eo
-// Estonian	et
-// Filipino	tl
-// Finnish	fi
-// French	fr
-// Frisian	fy
-// Galician	gl
-// Georgian	ka
-// German	de
-// Greek	el
-// Gujarati	gu
-// Haitian Creole	ht
-// Hausa	ha
-// Hawaiian	haw
-// Hebrew	iw
-// Hindi	hi
-// Hmong	hmn
-// Hungarian	hu
-// Icelandic	is
-// Igbo	ig
-// Indonesian	id
-// Irish	ga
-// Italian	it
-// Japanese	ja
-// Javanese	jw
-// Kannada	kn
-// Kazakh	kk
-// Khmer	km
-// Kinyarwanda	rw
-// Korean	ko
-// Kurdish (Kurmanji)	ku
-// Kyrgyz	ky
-// Lao	lo
-// Latin	la
-// Latvian	lv
-// Lithuanian	lt
-// Luxembourgish	lb
-// Macedonian	mk
-// Malagasy	mg
-// Malay	ms
-// Malayalam	ml
-// Maltese	mt
-// Maori	mi
-// Marathi	mr
-// Mongolian	mn
-// Myanmar (Burmese)	my
-// Nepali	ne
-// Norwegian	no
-// Odia (Oriya)	or
-// Pashto	ps
-// Persian	fa
-// Polish	pl
-// Portuguese	pt
-// Punjabi	pa
-// Romanian	ro
-// Russian	ru
-// Samoan	sm
-// Scots Gaelic	gd
-// Serbian	sr
-// Sesotho	st
-// Shona	sn
-// Sindhi	sd
-// Sinhala	si
-// Slovak	sk
-// Slovenian	sl
-// Somali	so
-// Spanish	es
-// Sundanese	su
-// Swahili	sw
-// Swedish	sv
-// Tajik	tg
-// Tamil	ta
-// Tatar	tt
-// Telugu	te
-// Thai	th
-// Turkish	tr
-// Turkmen	tk
-// Ukrainian	uk
-// Urdu	ur
-// Uyghur	ug
-// Uzbek	uz
-// Vietnamese	vi
-// Welsh	cy
-// Xhosa	xh
-// Yiddish	yi
-// Yoruba	yo
-// Zulu	zu
-// Hebrew	he
-// Chinese (Simplified)	zh
