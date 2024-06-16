@@ -101,12 +101,10 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <h3
-      data-title="click on title for description"
-      className="lorem"
-      onClick={(event: React.MouseEvent<HTMLElement>) =>  setShowDescription(!showDescription)}>
+      data-title="app is extracting posts from api and using api for translate"
+      className="lorem">
       Lorem Ipsum Posts
       </h3>
-      {showDescription && <h5 className="description">app is extracting posts from api and using api for translate</h5>}
       <Map position={language}/>
       <div data-title="select language">
       <select
