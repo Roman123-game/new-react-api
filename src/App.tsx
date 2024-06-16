@@ -108,6 +108,7 @@ const App: React.FC = () => {
       </h3>
       {showDescription && <h5 className="description">app is extracting posts from api and using api for translate</h5>}
       <Map position={language}/>
+      <div data-title="select language">
       <select
         className="select"
         onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
@@ -116,6 +117,7 @@ const App: React.FC = () => {
         <option value="ja">JAPANESE</option>
         <option value="de">GERMAN</option>
       </select>
+      </div>
       {slicePost.map((post: Post) => (
         <div className="id" key={post.id}>
           <div className="bold"> {post.id}</div>
@@ -125,7 +127,7 @@ const App: React.FC = () => {
             {post.title}
           </div>
           <button
-            data-title="delete post"
+            data-title="delete"
             className="buttonX"
             value={post.id}
             onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>
@@ -142,7 +144,7 @@ const App: React.FC = () => {
           &#x227C;
         </button>
         {toggleTranslatedPost
-          ? <div  title="translated post" className="translate">{translatedPost}</div>
+          ? <div  data-title="translated post" className="translate">{translatedPost}</div>
           : <div className="loader">&#x1F5FA;</div>}
         <button
           data-title="next page"
