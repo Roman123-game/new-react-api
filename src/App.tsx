@@ -44,27 +44,29 @@ const App: React.FC = () => {
     setPosts(responce.data);
   }
 
+   //   setTranslatedPost(response.data[0]);
+    //       setToggleTranslatedPost(true);
+
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://rapid-translate-multi-traduction.p.rapidapi.com/t',
+      url: 'https://google-api31.p.rapidapi.com/gtranslate',
       headers: {
         'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-        'x-rapidapi-host': 'rapid-translate-multi-traduction.p.rapidapi.com',
+        'x-rapidapi-host': 'google-api31.p.rapidapi.com',
         'Content-Type': 'application/json'
       },
       data: {
-        from: 'la',
+        text: currentPost,
         to: language,
-        q: currentPost
+        from_lang: 'la'
       }
     };
 
     try {
       const response = await axios.request(options);
-      console.log(response.data[0]);
-      setTranslatedPost(response.data[0]);
-          setToggleTranslatedPost(true);
+      setTranslatedPost(response.data.translated_text);
+      setToggleTranslatedPost(true);
     } catch (error) {
       console.error(error);
     }
