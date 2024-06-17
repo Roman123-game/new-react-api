@@ -125,7 +125,6 @@ const App: React.FC = () => {
             {post.title}
           </div>
           <button
-            data-title="delete"
             className="buttonX"
             value={post.id}
             onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>

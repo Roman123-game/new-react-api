@@ -107,6 +107,23 @@
   border: 3px dotted lightgreen;
   border-radius: 50%;
   cursor: pointer;
+
+}
+
+.buttonX:hover{
+    color: gold;
+    animation: rotate 1s ease-in-out;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0turn);
+  }
+
+  100% {
+    transform: rotateZ(0.5turn);
+  }
 }
 
 .bold {
@@ -136,8 +153,8 @@
 
 .backward:hover,
 .forward:hover,
-select:hover,
-.buttonX:hover {
+select:hover
+ {
   color: gold;
 }
 
