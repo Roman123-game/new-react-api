@@ -6,9 +6,21 @@
     font-size: small;
     cursor:context-menu;
     height: 10px;
-    width:10px
+    width:10px;
+    animation: rotate 2.5s ease-in-out;
+    transition: ease-in-out 1.5s;
 }
+@keyframes rotate {
+    0% {
 
+      transform: rotateY(0deg);
+    }
+
+    100% {
+        border: 1px solid lightgreen;
+      transform: rotateY(360deg);
+    }
+  }
 .map {
     position: relative;
     text-align: center;
@@ -28,8 +40,8 @@
 
 
 .en {
-    bottom: 140px;
-    left: 49.5%
+    bottom: 130px;
+    left: 44.5%;
 }
 
 .he{
