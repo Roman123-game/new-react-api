@@ -46,7 +46,7 @@ const App: React.FC = () => {
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://simple-translate2.p.rapidapi.com/translate',
+      // url: 'https://simple-translate2.p.rapidapi.com/translate',
       params: {
         source_lang: 'la',
         target_lang: language

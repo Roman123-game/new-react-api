@@ -5,10 +5,12 @@
     text-shadow: 1px 1px solid black;
     font-size: small;
     cursor:context-menu;
+    height: 10px;
+    width:10px
 }
 
 .map {
-    position: static;
+    position: relative;
     text-align: center;
     align-items: center;
     margin: 5px auto;
@@ -27,20 +29,20 @@
 
 .en {
     bottom: 140px;
-    right: 0px
+    left: 49.5%
 }
 
 .he{
     bottom: 120px;
-    left: 45px
+    left: 53%
 }
 
 .ja {
     bottom: 120px;
-    left: 90px
+    left: 56%
 }
 
 .de {
     bottom: 140px;
-    left: 15px;
+    left: 51%
 }
