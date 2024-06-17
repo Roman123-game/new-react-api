@@ -17,11 +17,10 @@ const App: React.FC = () => {
 
   const [posts, setPosts] = useState<any[]>([]);
   const [language, setLanguage] = useState<string>("en")
-  const [currentPost, setCurrentPost] = useState<string>("click on post for translation");
+  const [currentPost, setCurrentPost] = useState<string>("click on text");
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(10);
   const limit: number = 100;
-  const [showDescription, setShowDescription] = useState<boolean>(false);
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
@@ -44,32 +43,33 @@ const App: React.FC = () => {
     setPosts(responce.data);
   }
 
-   //   setTranslatedPost(response.data[0]);
-    //       setToggleTranslatedPost(true);
-
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://google-api31.p.rapidapi.com/gtranslate',
+      url: 'https://simple-translate2.p.rapidapi.com/translate',
+      params: {
+        source_lang: 'la',
+        target_lang: language
+      },
       headers: {
         'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-        'x-rapidapi-host': 'google-api31.p.rapidapi.com',
+        'x-rapidapi-host': 'simple-translate2.p.rapidapi.com',
         'Content-Type': 'application/json'
       },
       data: {
-        text: currentPost,
-        to: language,
-        from_lang: 'la'
+        sourceText: currentPost
       }
     };
 
     try {
       const response = await axios.request(options);
-      setTranslatedPost(response.data.translated_text);
-      setToggleTranslatedPost(true);
+      console.log(response.data.data.targetText)
+        setTranslatedPost(response.data.data.targetText);
+        setToggleTranslatedPost(true);
     } catch (error) {
       console.error(error);
     }
+
   }
 
 
