@@ -104,7 +104,7 @@
   margin-top: 0px;
   margin-right: 1px;
   margin-left: auto;
-  border: none;
+  border: 3px dotted lightgreen;
   border-radius: 50%;
   cursor: pointer;
 }
