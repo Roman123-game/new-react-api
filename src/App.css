@@ -74,7 +74,6 @@
   font-size: 16px;
   text-align: left;
   backdrop-filter: blur(8px) saturate(150%);
-
   color: white;
   font-family: sans-serif;
   border-radius: 25px;
@@ -183,7 +182,7 @@ select:focus {
   padding: 2px 20px;
   text-wrap: balance;
   margin: 20px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px) ;
   color: white;
   font-size: larger;
 }
