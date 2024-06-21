@@ -197,14 +197,16 @@ select:focus {
 }
 
 .loader {
-  border: 8px solid whitesmoke;
-  border-top: 8px solid #3498db;
+  background-color: dimgray;
+  border: 8px solid ;
+  border-color: lightgreen lightcoral;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   animation: spin 2s linear infinite;
   margin: 20px;
   font-size: medium;
+
 }
 
 @keyframes spin {

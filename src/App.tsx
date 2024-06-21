@@ -27,7 +27,7 @@ const App: React.FC = () => {
   let slicePost = posts.slice(page - 10, page)
 
   useEffect((): ReturnType<EffectCallback> => {
-    fetchPost()
+    // fetchPost()
   }, []);
 
   useEffect((): ReturnType<EffectCallback> => {
@@ -142,7 +142,7 @@ const App: React.FC = () => {
         </button>
         {toggleTranslatedPost
           ? <div  data-title="translated post" className="translate">{translatedPost}</div>
-          : <div className="loader">&#x1F5FA;</div>}
+          : <div className="loader">&#x1F4A4;</div>}
         <button
           data-title="next page"
           disabled={forwardDisabled}
