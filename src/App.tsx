@@ -39,7 +39,7 @@ const App: React.FC = () => {
   }, [currentPost]);
 
   async function fetchPost() {
-    const responce = await axios.get("https://jsonplaceholder.typicode.com/posts",{params: {_limit: limit}});
+    const responce = await axios.get("https://jsonplaceholder.typicode.com/posts", { params: { _limit: limit } });
     setPosts(responce.data);
   }
 
@@ -64,8 +64,8 @@ const App: React.FC = () => {
     try {
       const response = await axios.request(options);
       console.log(response.data.data.targetText)
-        setTranslatedPost(response.data.data.targetText);
-        setToggleTranslatedPost(true);
+      setTranslatedPost(response.data.data.targetText);
+      setToggleTranslatedPost(true);
     } catch (error) {
       console.error(error);
     }
@@ -86,7 +86,7 @@ const App: React.FC = () => {
       setBackwardDisabled(false);
       setPage(page + 10);
     }
-  }, [page,posts])
+  }, [page, posts])
 
   const setBackwardPage = useCallback(() => {
     if (page <= 10) {
@@ -98,48 +98,54 @@ const App: React.FC = () => {
     }
   }, [page])
 
-  const ArrowBackwardFunction =()=>{
-    if(page >50 ){
-      return    <>&#x022D8;</>;
+  const ArrowBackwardFunction = () => {
+    if (page > 50) {
+      return <>&#x022D8;</>;
+    }
+    else if (page > 20) {
+      return <>&#x0226A;</>;
     }
     else {
-      return  <>&#x0226A;</> ;
+      return <>&#60;</>;
     }
   }
 
-  const ArrowForwarddFunction =()=>{
-    if(page >50 ){
-      return   <>&#x0226B;</> ;
+  const ArrowForwarddFunction = () => {
+    if (page > 80) {
+      return <>&#x3E;</>;
+    }
+    else if (page > 50) {
+      return <>&#x0226B;</>;
     }
     else {
-      return    <>&#x022D9;</>;
+      return <>&#x022D9;</>;
     }
   }
 
   return (
     <div className="App">
       <h3
-      data-title="app is extracting posts from api and using api for translate"
-      className="lorem">
-      Lorem Ipsum Posts
+        data-title="app is extracting posts from api and using api for translate"
+        className="lorem">
+        Lorem Ipsum Posts
       </h3>
-      <Map position={language}/>
+      <Map position={language} />
       <div data-title="select language">
-      <select
-        className="select"
-        onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
-        <option value="en">english</option>
-        <option value="he">hebrew</option>
-        <option value="ja">japanese</option>
-        <option value="de">german</option>
-      </select>
+        <select
+          className="select"
+          onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
+          <option value="en">english</option>
+          <option value="he">hebrew</option>
+          <option value="ja">japanese</option>
+          <option value="de">german</option>
+        </select>
       </div>
       {slicePost.map((post: Post) => (
         <div className="post_container" key={post.id}>
           <div className="id"> {post.id}</div>
           <div
             className="post"
-            onClick={(event: React.MouseEvent<HTMLElement>) =>  setCurrentPost(event.currentTarget.innerHTML)}>
+            onClick={(event: React.MouseEvent<HTMLElement>) => setCurrentPost(event.currentTarget.innerHTML)}>
             {post.title}
           </div>
           <button
@@ -152,21 +158,21 @@ const App: React.FC = () => {
       ))}
       <div className="container">
         <button
-         data-title="previous page"
+          data-title="previous page"
           disabled={backwardDisabled}
           className="backward"
           onClick={setBackwardPage}>
-          <ArrowBackwardFunction/>
+          <ArrowBackwardFunction />
         </button>
         {toggleTranslatedPost
-          ? <div  data-title="translated post" className="translate">{translatedPost}</div>
+          ? <div data-title="translated post" className="translate">{translatedPost}</div>
           : <div className="loader">&#x1F4A4;</div>}
         <button
           data-title="next page"
           disabled={forwardDisabled}
           className="forward"
           onClick={setForwardPage}>
-         <ArrowForwarddFunction/>
+          <ArrowForwarddFunction />
         </button>
       </div>
     </div>
