@@ -27,7 +27,7 @@ const App: React.FC = () => {
   let slicePost = posts.slice(page - 10, page)
 
   useEffect((): ReturnType<EffectCallback> => {
-    // fetchPost()
+    fetchPost()
   }, []);
 
   useEffect((): ReturnType<EffectCallback> => {
