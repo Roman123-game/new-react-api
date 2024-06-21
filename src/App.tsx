@@ -117,8 +117,8 @@ const App: React.FC = () => {
       </select>
       </div>
       {slicePost.map((post: Post) => (
-        <div className="id" key={post.id}>
-          <div className="bold"> {post.id}</div>
+        <div className="post_container" key={post.id}>
+          <div className="id"> {post.id}</div>
           <div
             className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) =>  setCurrentPost(event.currentTarget.innerHTML)}>
