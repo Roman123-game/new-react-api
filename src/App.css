@@ -65,7 +65,10 @@
   background-color: lightseagreen;
   border-radius: 25px;
   color: white;
-  margin-top: 0px;}
+  margin-top: 0px;
+  text-transform: capitalize;
+
+}
 
 .post_container{
   display: flex;

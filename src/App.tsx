@@ -98,6 +98,25 @@ const App: React.FC = () => {
     }
   }, [page])
 
+  const ArrowBackwardFunction =()=>{
+    if(page >50 ){
+      return    <>&#x022D8;</>;
+    }
+
+    else {
+      return  <>&#x0226A;</> ;
+    }
+  }
+
+  const ArrowForwarddFunction =()=>{
+    if(page >50 ){
+      return   <>&#x0226B;</> ;
+    }
+    else {
+      return    <>&#x022D9;</>;
+    }
+  }
+
   return (
     <div className="App">
       <h3
@@ -110,10 +129,10 @@ const App: React.FC = () => {
       <select
         className="select"
         onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
-        <option value="en">ENGLISH</option>
-        <option value="he">HEBREW</option>
-        <option value="ja">JAPANESE</option>
-        <option value="de">GERMAN</option>
+        <option value="en">english</option>
+        <option value="he">hebrew</option>
+        <option value="ja">japanese</option>
+        <option value="de">german</option>
       </select>
       </div>
       {slicePost.map((post: Post) => (
@@ -138,7 +157,7 @@ const App: React.FC = () => {
           disabled={backwardDisabled}
           className="backward"
           onClick={setBackwardPage}>
-          &#x227C;
+          <ArrowBackwardFunction/>
         </button>
         {toggleTranslatedPost
           ? <div  data-title="translated post" className="translate">{translatedPost}</div>
@@ -148,7 +167,7 @@ const App: React.FC = () => {
           disabled={forwardDisabled}
           className="forward"
           onClick={setForwardPage}>
-          &#x227D;
+         <ArrowForwarddFunction/>
         </button>
       </div>
     </div>
