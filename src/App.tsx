@@ -102,7 +102,6 @@ const App: React.FC = () => {
     if(page >50 ){
       return    <>&#x022D8;</>;
     }
-
     else {
       return  <>&#x0226A;</> ;
     }
