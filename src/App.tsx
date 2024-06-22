@@ -3,6 +3,7 @@ import "./App.css";
 import * as React from "react";
 import { memo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map";
+import SelectLanguage from "./components/Select/SelectLanguage";
 
 type EffectCallback = () => (void | any);
 
@@ -131,14 +132,7 @@ const App: React.FC = () => {
       </h3>
       <Map position={language} />
       <div data-title="select language">
-        <select
-          className="select"
-          onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}>
-          <option value="en">english</option>
-          <option value="he">hebrew</option>
-          <option value="ja">japanese</option>
-          <option value="de">german</option>
-        </select>
+        <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}/>
       </div>
       {slicePost.map((post: Post) => (
         <div className="post_container" key={post.id}>
