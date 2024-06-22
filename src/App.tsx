@@ -131,9 +131,7 @@ const App: React.FC = () => {
         Lorem Ipsum Posts
       </h3>
       <Map position={language} />
-      <div data-title="select language">
-        <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)}/>
-      </div>
+      <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)} />
       {slicePost.map((post: Post) => (
         <div className="post_container" key={post.id}>
           <div className="id"> {post.id}</div>

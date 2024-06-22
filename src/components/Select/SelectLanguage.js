@@ -4,6 +4,7 @@ function SelectLanguage(props) {
 
 const {onChange} = props
   return (
+    <div data-title="select language">
     <select
     className="select"
     onChange={onChange}>
@@ -12,6 +13,8 @@ const {onChange} = props
     <option value="ja">japanese</option>
     <option value="de">german</option>
   </select>
+  </div>
+
   )
 }
 
