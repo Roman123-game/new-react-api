@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-[data-title]{
+[data-title] {
   position: relative;
 }
 
@@ -34,7 +34,7 @@
 
 [data-title]:after {
   content: attr(data-title);
-  background-color:aquamarine;
+  background-color: aquamarine;
   color: #111;
   font-size: 12px;
   font-weight: 100;
@@ -66,11 +66,11 @@
   border-radius: 25px;
   color: white;
   text-transform: capitalize;
-  height:   40px;
+  height: 40px;
 
 }
 
-.post_container{
+.post_container {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -113,9 +113,9 @@
 
 }
 
-.buttonX:hover{
-    color: gold;
-    animation: rotate 1s ease-in-out;
+.buttonX:hover {
+  color: gold;
+  animation: rotate 1s ease-in-out;
 
 }
 
@@ -134,35 +134,32 @@
   font-size: small;
   background-color: lightgreen;
   color: grey;
-  border-radius:48%;
+  border-radius: 48%;
   padding: 2px 7px;
   letter-spacing: -1px;
   cursor: context-menu;
-
 }
 
 .forward,
-.backward{
-  height:   30px;
+.backward {
+  height: 30px;
 }
+
 .forward,
 .backward,
 .select {
   background-color: slategrey;
   border: 5px double lightgreen;
   width: 120px;
-
   border-radius: 25px;
   font-size: medium;
   color: white;
   cursor: pointer;
 }
 
-
 .backward:hover,
 .forward:hover,
-select:hover
- {
+select:hover {
   color: gold;
 }
 
@@ -189,7 +186,7 @@ select:focus {
   padding: 2px 20px;
   text-wrap: balance;
   margin: 20px;
-  backdrop-filter: blur(8px) ;
+  backdrop-filter: blur(8px);
   color: white;
   font-size: larger;
 }
@@ -206,7 +203,7 @@ select:focus {
 
 .loader {
   background-color: dimgray;
-  border: 8px solid ;
+  border: 8px solid;
   border-color: lightgreen lightcoral;
   border-radius: 50%;
   width: 30px;
