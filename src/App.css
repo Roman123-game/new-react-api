@@ -65,8 +65,8 @@
   background-color: lightseagreen;
   border-radius: 25px;
   color: white;
-  margin-top: 0px;
   text-transform: capitalize;
+  height:   40px;
 
 }
 
@@ -143,11 +143,16 @@
 }
 
 .forward,
+.backward{
+  height:   30px;
+}
+.forward,
 .backward,
 .select {
   background-color: slategrey;
   border: 5px double lightgreen;
   width: 120px;
+
   border-radius: 25px;
   font-size: medium;
   color: white;
