@@ -66,7 +66,7 @@
   border-radius: 25px;
   color: white;
   text-transform: capitalize;
-  height: 40px;
+  height: 36px;
 
 }
 
@@ -142,7 +142,7 @@
 
 .forward,
 .backward {
-  height: 30px;
+  height: 28px;
 }
 
 .forward,
