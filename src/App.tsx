@@ -145,7 +145,7 @@ try {
   return (
     <div className="App">
       <h3
-        data-title="app is extracting posts from api and using api for translate"
+        data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
         famous people quotes
       </h3>
