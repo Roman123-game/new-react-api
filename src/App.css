@@ -81,6 +81,7 @@
 
 .post {
   margin-left: 5px;
+text-wrap:pretty;
 }
 
 .post::before{
