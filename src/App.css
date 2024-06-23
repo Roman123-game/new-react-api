@@ -81,13 +81,14 @@
 
 .post {
   margin-left: 5px;
-text-wrap:pretty;
+  text-wrap: pretty;
 }
 
-.post::before{
+.post::before {
   content: '\0002EE'
 }
-.post::after{
+
+.post::after {
   content: '\0002EE'
 }
 
@@ -133,7 +134,7 @@ text-wrap:pretty;
 
 .id {
   height: 16px;
-  width : auto;
+  width: auto;
   text-wrap: nowrap;
   font-size: small;
   background-color: lightgreen;
@@ -150,8 +151,7 @@ text-wrap:pretty;
 }
 
 .forward,
-.backward
- {
+.backward {
   background-color: slategrey;
   border: 5px double lightgreen;
   width: 120px;
@@ -162,8 +162,7 @@ text-wrap:pretty;
 }
 
 .backward:hover,
-.forward:hover
- {
+.forward:hover {
   color: gold;
 }
 
