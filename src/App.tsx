@@ -157,7 +157,7 @@ try {
           <div
             className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) => setCurrentPost(event.currentTarget.innerHTML)}>
-            "{post.text}"
+       {post.text}
           </div>
           <button
             className="buttonX"

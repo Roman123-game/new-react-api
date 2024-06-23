@@ -82,6 +82,14 @@
   margin-left: 5px;
 }
 
+.post::before{
+  content: '\0002EE'
+}
+.post::after{
+  content: '\0002EE'
+}
+
+
 
 
 .post::first-letter {
