@@ -68,7 +68,7 @@ try {
       method: 'POST',
       url: 'https://simple-translate2.p.rapidapi.com/translate',
       params: {
-        source_lang: 'la',
+        source_lang: 'auto',
         target_lang: language
       },
       headers: {
