@@ -61,15 +61,6 @@
   padding: 3px 6px;
 }
 
-.select {
-  padding: 5px;
-  background-color: lightseagreen;
-  border-radius: 25px;
-  color: white;
-  text-transform: capitalize;
-  height: 38px;
-
-}
 
 .post_container {
   display: flex;
@@ -149,8 +140,8 @@
 }
 
 .forward,
-.backward,
-.select {
+.backward
+ {
   background-color: slategrey;
   border: 5px double lightgreen;
   width: 120px;
@@ -161,14 +152,12 @@
 }
 
 .backward:hover,
-.forward:hover,
-select:hover {
+.forward:hover
+ {
   color: gold;
 }
 
-select:focus {
-  outline: none;
-}
+
 
 .forward:disabled,
 .backward:disabled {
