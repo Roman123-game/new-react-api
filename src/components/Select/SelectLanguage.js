@@ -1,5 +1,5 @@
 import React from 'react'
-import './SelectLabguage.css'
+import './SelectLanguage.css'
 
 function SelectLanguage(props) {
 
