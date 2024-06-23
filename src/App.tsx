@@ -41,26 +41,26 @@ const App: React.FC = () => {
 
   async function fetchPost() {
     const options = {
-  method: 'GET',
-  url: 'https://famous-quotes4.p.rapidapi.com/random',
-  params: {
-    category: 'all',
-    count: limit
-  },
-  headers: {
-    'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-    'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com'
-  }
-};
+      method: 'GET',
+      url: 'https://famous-quotes4.p.rapidapi.com/random',
+      params: {
+        category: 'all',
+        count: limit
+      },
+      headers: {
+        'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+        'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com'
+      }
+    };
 
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-  setPosts(response.data);
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setPosts(response.data);
 
-} catch (error) {
-	console.error(error);
-}
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   async function translate() {
@@ -157,7 +157,7 @@ try {
           <div
             className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) => setCurrentPost(event.currentTarget.innerHTML)}>
-       {post.text}
+            {post.text}
           </div>
           <button
             className="buttonX"
