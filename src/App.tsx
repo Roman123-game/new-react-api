@@ -2,7 +2,7 @@ import axios from "axios";
 import "./App.css";
 import * as React from "react";
 import { memo, useState, useEffect, useCallback } from "react";
-import Map from "./components/Map";
+import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
 
 type EffectCallback = () => (void | any);
