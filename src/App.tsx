@@ -153,11 +153,11 @@ try {
       <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)} />
       {slicePost.map((post: Post) => (
         <div className="post_container" key={post.id}>
-          <div className="id"> {post.author}</div>
+          <div className="id">{post.author}</div>
           <div
             className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) => setCurrentPost(event.currentTarget.innerHTML)}>
-            {post.text}
+            "{post.text}"
           </div>
           <button
             className="buttonX"
