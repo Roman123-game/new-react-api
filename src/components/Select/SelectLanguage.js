@@ -13,7 +13,6 @@ const {onChange} = props
     <option value="ja">japanese</option>
     <option value="de">german</option>
     <option value="ru">russian</option>
-    <option value="uk">ukraine</option>
   </select>
   </div>
 
