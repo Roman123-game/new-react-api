@@ -8,10 +8,10 @@ import SelectLanguage from "./components/Select/SelectLanguage";
 type EffectCallback = () => (void | any);
 
 interface Post {
-  completed: boolean,
   id: number,
-  title: string,
-  userId: number,
+  text: string,
+  author: string,
+  category: string
 }
 
 const App: React.FC = () => {
@@ -40,8 +40,27 @@ const App: React.FC = () => {
   }, [currentPost]);
 
   async function fetchPost() {
-    const responce = await axios.get("https://jsonplaceholder.typicode.com/posts", { params: { _limit: limit } });
-    setPosts(responce.data);
+    const options = {
+  method: 'GET',
+  url: 'https://famous-quotes4.p.rapidapi.com/random',
+  params: {
+    category: 'all',
+    count: limit
+  },
+  headers: {
+    'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+    'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+  setPosts(response.data);
+
+} catch (error) {
+	console.error(error);
+}
   }
 
   async function translate() {
@@ -128,17 +147,17 @@ const App: React.FC = () => {
       <h3
         data-title="app is extracting posts from api and using api for translate"
         className="lorem">
-        Lorem Ipsum Posts
+        famous people quotes
       </h3>
       <Map position={language} />
       <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)} />
       {slicePost.map((post: Post) => (
         <div className="post_container" key={post.id}>
-          <div className="id"> {post.id}</div>
+          <div className="id"> {post.author}</div>
           <div
             className="post"
             onClick={(event: React.MouseEvent<HTMLElement>) => setCurrentPost(event.currentTarget.innerHTML)}>
-            {post.title}
+            {post.text}
           </div>
           <button
             className="buttonX"
