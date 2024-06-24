@@ -69,7 +69,7 @@
   justify-content: space-around;
   font-size: 16px;
   text-align: left;
-  backdrop-filter: blur(8px) saturate(150%);
+  backdrop-filter: blur(8px) saturate(120%);
   color: white;
   font-family: sans-serif;
   border-radius: 25px;
