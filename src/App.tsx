@@ -4,6 +4,7 @@ import * as React from "react";
 import { memo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
+import Modal from './components/Modal/Modal'
 
 type EffectCallback = () => (void | any);
 
@@ -142,6 +143,23 @@ const App: React.FC = () => {
     }
   }
 
+  const dialog = document.querySelector("dialog");
+
+  // "Show the dialog" button opens the dialog modally
+  const openModal = () => {
+
+    const showButton = document?.querySelector("dialog + button")?.addEventListener("click", () => {
+      dialog?.showModal();;
+
+    })
+  };
+
+  const closeButton = document?.querySelector("dialog button")?.addEventListener("click", () => {
+    dialog?.close();
+  });
+
+
+
   return (
     <div className="App">
       <h3
@@ -186,6 +204,12 @@ const App: React.FC = () => {
           <ArrowForwarddFunction />
         </button>
       </div>
+
+      <dialog className="dialog">
+        <button >Close</button>
+        <p>This modal dialog has a groovy backdrop!</p>
+      </dialog>
+      <button>Show the dialog</button>
     </div>
   );
 }
