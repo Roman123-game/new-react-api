@@ -84,12 +84,11 @@
   text-wrap: pretty;
 }
 
-.post::before {
-  content: '\0002EE'
+.post::before{
+  content: '\00201F'
 }
-
-.post::after {
-  content: '\0002EE'
+.post::after{
+  content: '\00201D'
 }
 
 
