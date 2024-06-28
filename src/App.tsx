@@ -151,7 +151,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-     { modal && <ClassicModal/>}
+     {/* { modal && <ClassicModal/>} */}
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
