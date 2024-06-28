@@ -151,7 +151,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-     {/* { modal && <ClassicModal/>} */}
+     { modal && <ClassicModal/>}
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
@@ -172,7 +172,7 @@ const App: React.FC = () => {
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event: React.FormEvent<HTMLButtonElement>) => {showModal(event)}}>
+            onClick={(event: React.FormEvent<HTMLButtonElement>) => {removePost(event)}}>
             x
           </button>
         </div>
