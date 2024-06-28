@@ -91,15 +91,6 @@
   content: '\00201D'
 }
 
-
-
-
-.post::first-letter {
-  text-transform: uppercase;
-}
-
-
-
 .buttonX {
   background-color: dimgray;
   opacity: 0.6;
