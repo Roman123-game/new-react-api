@@ -48,7 +48,7 @@
   box-shadow: 1px 1px 3px #222222;
   border: 1px solid #111111;
   border-radius: 25px;
-  z-index: 9;
+  z-index: 2;
   visibility: hidden;
 
 }
@@ -116,9 +116,7 @@
 
 }
 
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.631)
-}
+
 
 .buttonX:hover {
   color: gold;

@@ -4,7 +4,7 @@ import * as React from "react";
 import { memo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
-import Modal from './components/Modal/Modal'
+import ClassicModal from "./components/ClassicModal/ClassicModal";
 
 type EffectCallback = () => (void | any);
 
@@ -27,6 +27,7 @@ const App: React.FC = () => {
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
   let slicePost = posts.slice(page - 10, page)
+  const [modal, setModal] = useState<boolean>(false);
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
@@ -143,30 +144,21 @@ const App: React.FC = () => {
     }
   }
 
-  const dialog = document.querySelector("dialog");
-
-  // "Show the dialog" button opens the dialog modally
-  const openModal = () => {
-
-    const showButton = document?.querySelector("dialog + button")?.addEventListener("click", () => {
-      dialog?.showModal();;
-
-    })
-  };
-
-  const closeButton = document?.querySelector("dialog button")?.addEventListener("click", () => {
-    dialog?.close();
-  });
-
-
+  const showModal=(event:any)=>{
+    setModal(true);
+    console.log(event)
+  }
 
   return (
     <div className="App">
+     { modal && <ClassicModal/>}
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
         famous people quotes
       </h3>
+
+
       <Map position={language} />
       <SelectLanguage onChange={(event: React.FormEvent<HTMLSelectElement>) => setLanguage(event.currentTarget.value)} />
       {slicePost.map((post: Post) => (
@@ -180,11 +172,12 @@ const App: React.FC = () => {
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>
+            onClick={(event: React.FormEvent<HTMLButtonElement>) => {showModal(event)}}>
             x
           </button>
         </div>
       ))}
+
       <div className="container">
         <button
           data-title="previous page"
@@ -204,12 +197,6 @@ const App: React.FC = () => {
           <ArrowForwarddFunction />
         </button>
       </div>
-
-      {/* <dialog className="dialog">
-        <button >Close</button>
-        <p>This modal dialog has a groovy backdrop!</p>
-      </dialog>
-      <button>Show the dialog</button> */}
     </div>
   );
 }
