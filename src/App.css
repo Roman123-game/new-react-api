@@ -184,6 +184,13 @@
   color: white;
   font-size: larger;
 }
+.translate::before{
+  content: '\00201F'
+}
+.translate::after{
+  content: '\00201D'
+}
+
 
 .translate::first-letter {
   text-transform: uppercase;

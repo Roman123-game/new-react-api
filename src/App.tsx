@@ -187,7 +187,7 @@ const App: React.FC = () => {
           <ArrowBackwardFunction />
         </button>
         {toggleTranslatedPost
-          ? <div data-title="translated post" className="translate">{translatedPost}</div>
+          ? <div className="translate">{translatedPost}</div>
           : <div className="loader">&#x1F4A4;</div>}
         <button
           data-title="next page"
