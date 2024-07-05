@@ -185,10 +185,10 @@
   font-size: larger;
 }
 .translate::before{
-  content: '\00201F'
+  content: '\0002DD'
 }
 .translate::after{
-  content: '\00201D'
+  content: '\0002DD'
 }
 
 
