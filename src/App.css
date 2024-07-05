@@ -184,12 +184,11 @@
   color: white;
   font-size: larger;
 }
-.translate::before{
-  content: '\0002DD'
-}
+.translate::before,
 .translate::after{
   content: '\0002DD'
 }
+
 
 
 .translate::first-letter {
