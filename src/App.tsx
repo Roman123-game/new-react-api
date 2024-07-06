@@ -188,7 +188,7 @@ const App: React.FC = () => {
         </button>
         {toggleTranslatedPost
           ? <div className="translate">{translatedPost}</div>
-          : <div className="loader">&#x1F4A4;</div>}
+          : <div className="loader"></div>}
         <button
           data-title="next page"
           disabled={forwardDisabled}

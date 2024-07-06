@@ -211,7 +211,6 @@
   animation: spin 2s linear infinite;
   margin: 20px;
   font-size: large;
-  backdrop-filter: blur(8px);
 
 }
 
