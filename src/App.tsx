@@ -57,7 +57,6 @@ const App: React.FC = () => {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
       setPosts(response.data);
 
     } catch (error) {
@@ -85,7 +84,6 @@ const App: React.FC = () => {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data.data.targetText)
       setTranslatedPost(response.data.data.targetText);
       setToggleTranslatedPost(true);
     } catch (error) {
