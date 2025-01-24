@@ -64,32 +64,31 @@ const App: React.FC = () => {
     }
   }
 
+  const encodedParams = new URLSearchParams();
+encodedParams.set('source_language', "en");
+encodedParams.set('target_language', language);
+encodedParams.set('text', currentPost);
+
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://simple-translate2.p.rapidapi.com/translate',
-      params: {
-        source_lang: 'auto',
-        target_lang: language
-      },
+      url: 'https://text-translator2.p.rapidapi.com/translate',
       headers: {
         'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
-        'x-rapidapi-host': 'simple-translate2.p.rapidapi.com',
-        'Content-Type': 'application/json'
+        'x-rapidapi-host': 'text-translator2.p.rapidapi.com',
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
-      data: {
-        sourceText: currentPost
-      }
+      data: encodedParams,
     };
 
     try {
       const response = await axios.request(options);
-      setTranslatedPost(response.data.data.targetText);
+      console.log(response.data);
+      setTranslatedPost(response.data.data.translatedText);
       setToggleTranslatedPost(true);
     } catch (error) {
       console.error(error);
     }
-
   }
 
 
