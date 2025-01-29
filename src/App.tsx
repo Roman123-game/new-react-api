@@ -1,7 +1,7 @@
 import axios from "axios";
 import "./App.css";
 import * as React from "react";
-import { useMemo,memo, useState, useEffect, useCallback } from "react";
+import { useMemo, memo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
 import ClassicModal from "./components/ClassicModal/ClassicModal";
@@ -71,9 +71,9 @@ const App: React.FC = () => {
   }
 
   const encodedParams = new URLSearchParams();
-encodedParams.set('source_language', "en");
-encodedParams.set('target_language', language);
-encodedParams.set('text', currentPost);
+  encodedParams.set('source_language', "en");
+  encodedParams.set('target_language', language);
+  encodedParams.set('text', currentPost);
 
   async function translate() {
     const options = {
@@ -146,15 +146,9 @@ encodedParams.set('text', currentPost);
       return <>&#x022D9;</>;
     }
   }
-
-  const showModal=(event:any)=>{
-    setModal(true);
-    console.log(event)
-  }
-
   return (
     <div className="App">
-     { modal && <ClassicModal/>}
+      {modal && <ClassicModal />}
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
@@ -175,7 +169,7 @@ encodedParams.set('text', currentPost);
           <button
             className="buttonX"
             value={post.id}
-            onClick={(event: React.FormEvent<HTMLButtonElement>) => {removePost(event)}}>
+            onClick={(event: React.FormEvent<HTMLButtonElement>) => { removePost(event) }}>
             x
           </button>
         </div>
