@@ -1,7 +1,7 @@
 import axios from "axios";
 import "./App.css";
 import * as React from "react";
-import { memo, useState, useEffect, useCallback } from "react";
+import { useMemo,memo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
 import ClassicModal from "./components/ClassicModal/ClassicModal";
@@ -26,20 +26,26 @@ const App: React.FC = () => {
   const [forwardDisabled, setForwardDisabled] = useState<boolean>(false);
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
-  let slicePost = posts.slice(page - 10, page)
+  const slicePost = useMemo(() => posts.slice(page - 10, page), [posts, page]);
   const [modal, setModal] = useState<boolean>(false);
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
   }, []);
 
-  useEffect((): ReturnType<EffectCallback> => {
-    slicePost = posts.slice(page - 10, page)
-  }, [page]);
+  useEffect(() => {
+    setForwardDisabled(page >= posts.length);
+    setBackwardDisabled(page <= 10);
+  }, [page, posts]);
 
-  useEffect((): ReturnType<EffectCallback> => {
-    translate();
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      translate();
+    }, 500);
+
+    return () => clearTimeout(timeoutId);
   }, [currentPost]);
+
 
   async function fetchPost() {
     const options = {
@@ -50,7 +56,7 @@ const App: React.FC = () => {
         count: limit
       },
       headers: {
-        'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+        'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com'
       }
     };
@@ -74,7 +80,7 @@ encodedParams.set('text', currentPost);
       method: 'POST',
       url: 'https://text-translator2.p.rapidapi.com/translate',
       headers: {
-        'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+        'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
         'x-rapidapi-host': 'text-translator2.p.rapidapi.com',
         'Content-Type': 'application/x-www-form-urlencoded'
       },
@@ -92,10 +98,10 @@ encodedParams.set('text', currentPost);
   }
 
 
-  const removePost = useCallback((event: any) => {
-    const afterFilter = posts.filter((value: any) => value.id !== parseInt(event.target.value));
-    setPosts(afterFilter);
-  }, [posts])
+  const removePost = (event: any) => {
+    setPosts((prevPosts) => prevPosts.filter((post) => post.id !== parseInt(event.target.value)));
+  };
+
 
   const setForwardPage = useCallback(() => {
     if (page >= posts.length) {
