@@ -27,7 +27,6 @@ const App: React.FC = () => {
   const [backwardDisabled, setBackwardDisabled] = useState<boolean>(false);
   const [toggleTranslatedPost, setToggleTranslatedPost] = useState<boolean>(false);
   const slicePost = useMemo(() => posts.slice(page - 10, page), [posts, page]);
-  const [modal, setModal] = useState<boolean>(false);
 
   useEffect((): ReturnType<EffectCallback> => {
     fetchPost()
@@ -148,7 +147,6 @@ const App: React.FC = () => {
   }
   return (
     <div className="App">
-      {modal && <ClassicModal />}
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
