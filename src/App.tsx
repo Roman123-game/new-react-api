@@ -1,10 +1,9 @@
 import axios from "axios";
 import "./App.css";
 import * as React from "react";
-import { useMemo, memo, useState, useEffect, useCallback } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
-import ClassicModal from "./components/ClassicModal/ClassicModal";
 
 type EffectCallback = () => (void | any);
 
@@ -196,4 +195,4 @@ const App: React.FC = () => {
   );
 }
 
-export default memo(App);
+export default App;
