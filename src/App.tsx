@@ -1,6 +1,5 @@
 import axios from "axios";
 import "./App.css";
-import * as React from "react";
 import { useMemo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
