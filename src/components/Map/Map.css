@@ -4,9 +4,9 @@
     z-index: 10;
     text-shadow: 1px 1px solid black;
     font-size: small;
-    cursor:context-menu;
+    cursor: context-menu;
     height: 10px;
-    width:10px;
+    width: 10px;
     transition: ease-in-out 1.5s;
 
 }
@@ -25,7 +25,7 @@
     backdrop-filter: blur(8px) saturate(150%);
     border: 3px solid lightgreen;
     border-radius: 150px;
-    cursor:context-menu;
+    cursor: context-menu;
 }
 
 
@@ -34,7 +34,7 @@
     left: 24%;
 }
 
-.he{
+.he {
     bottom: 110px;
     left: 62%
 }
@@ -48,6 +48,13 @@
     bottom: 135px;
     left: 49.5%
 }
-.ru{    bottom: 135px;
+
+.ru {
+    bottom: 135px;
     left: 60%
+}
+
+.uk {
+    bottom: 120px;
+    left: 54%
 }
