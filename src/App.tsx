@@ -16,8 +16,8 @@ interface Post {
 const App: React.FC = () => {
 
   const [posts, setPosts] = useState<any[]>([]);
-  const [language, setLanguage] = useState<string>("en")
-  const [currentPost, setCurrentPost] = useState<string>("click on text");
+  const [language, setLanguage] = useState<string>("ja")
+  const [currentPost, setCurrentPost] = useState<string>("click on text for translation");
   const [translatedPost, setTranslatedPost] = useState<string>("");
   const [page, setPage] = useState<number>(10);
   const limit: number = 100;
@@ -67,32 +67,35 @@ const App: React.FC = () => {
     }
   }
 
-  const encodedParams = new URLSearchParams();
-  encodedParams.set('source_language', "en");
-  encodedParams.set('target_language', language);
-  encodedParams.set('text', currentPost);
+
 
   async function translate() {
     const options = {
       method: 'POST',
-      url: 'https://text-translator2.p.rapidapi.com/translate',
+      url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2',
       headers: {
-        'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
-        'x-rapidapi-host': 'text-translator2.p.rapidapi.com',
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'x-rapidapi-key': '666d07c64dmshbea3d6f634623e9p1851bfjsn7ee4693455d1',
+        'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
+        'Content-Type': 'application/json'
       },
-      data: encodedParams,
+      data: {
+        q: currentPost,
+        source: 'en',
+        target: language
+      }
     };
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
-      setTranslatedPost(response.data.data.translatedText);
+      console.log(response.data.data.translations.translatedText);
+      setTranslatedPost(response.data.data.translations.translatedText);
       setToggleTranslatedPost(true);
     } catch (error) {
       console.error(error);
     }
   }
+
+
 
 
   const removePost = (event: any) => {

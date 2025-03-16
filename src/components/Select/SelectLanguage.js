@@ -9,7 +9,7 @@ const {onChange} = props
     <select
     className="select"
     onChange={onChange}>
-    <option value="he">hebrew</option>
+    {/* <option value="he">hebrew</option> */}
     <option value="ja">japanese</option>
     <option value="de">german</option>
     <option value="ru">russian</option>
