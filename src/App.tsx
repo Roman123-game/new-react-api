@@ -151,7 +151,7 @@ const App: React.FC = () => {
       <h3
         data-title="app is extracting famous people quotes from api and using api for translate"
         className="lorem">
-        famous people quotes
+        famous people quotes translated
       </h3>
 
 
