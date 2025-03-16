@@ -17,7 +17,7 @@
   color: white;
   margin: auto;
   backdrop-filter: blur(8px) saturate(150%);
-  width: 400px;
+  width: auto;
   border: 5px inset transparent;
   letter-spacing: 2px;
   text-transform: capitalize;
