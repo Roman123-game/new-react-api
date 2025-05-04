@@ -11,7 +11,7 @@ const {onChange} = props
     {/* <option value="he">hebrew</option> */}
     <option value="ja">japanese</option>
     <option value="de">german</option>
-    {/* <option value="ru">russian</option> */}
+    <option value="ru">russian</option>
     <option value="uk">ukrainan</option>
     <option value="fr">french</option>
   </select>
