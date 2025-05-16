@@ -3,7 +3,7 @@
   text-align: center;
   color: black;
   font-size: x-large;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.631), rgba(0, 67, 48, 0.527)),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.631), rgba(0, 116, 83, 0.527)),
   url("../public/wallpaper.png");
   background-repeat: repeat;
   overflow-x: hidden;
