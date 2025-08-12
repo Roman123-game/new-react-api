@@ -1,6 +1,8 @@
+
+
 import axios from "axios";
 import "./App.css";
-import { useMemo, useState, useEffect, useCallback } from "react";
+import React, { useMemo, useState, useEffect, useCallback } from "react";
 import Map from "./components/Map/Map";
 import SelectLanguage from "./components/Select/SelectLanguage";
 
@@ -99,7 +101,7 @@ const App: React.FC = () => {
 
 
   const removePost = (event: any) => {
-    setPosts((prevPosts) => prevPosts.filter((post) => post.id !== parseInt(event.target.value)));
+    setPosts((prevPosts:any) => prevPosts.filter((post:any) => post.id !== parseInt(event.target.value)));
   };
 
 
